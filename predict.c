@@ -107,8 +107,8 @@ void do_predict(FILE *input, FILE *output)
 				x = (struct feature_node *) realloc(x, max_nr_attr * sizeof(struct feature_node));
 			}
             
-            if (flag_with_label == 0 && i == 0) line_remain = line;
-            else line_remain = NULL;
+			if (flag_with_label == 0 && i == 0) line_remain = line;
+			else line_remain = NULL;
  
 			idx = strtok(line_remain,":");
 			val = strtok(NULL," \t");
@@ -212,7 +212,7 @@ int main(int argc, char **argv)
 				info = &print_null;
 				i--;
 				break;
-			case 'l':
+			case 'l':                                    // add label l
 				flag_with_label = atoi(argv[i]);
 				break;
 			default:
